@@ -41,14 +41,17 @@ let i = 0
       .then(data => {
         // console.log(data)
         const len = data[0].meanings[0].definitions.length
-        // console.log(len)
+        console.log(len)
         
+        data.forEach(function(element) {
+          console.log(element.meanings.definitions)
+        });
+
       // document.querySelector('#definition1').innerText = data[1].meanings[1].definitions[0].definition
-        if(i < len) {
-          document.querySelector('#definition1').innerText = data[0].meanings[0].definitions[i].definition
-          i = Number(i) + 1
-          console.log(i)
-        }
+        // if(i < len) {
+        //   document.querySelector('#definition1').innerText = data[0].meanings[0].definitions[i].definition
+        //   return i = Number(i) + 1
+        // }
       })
 
 
